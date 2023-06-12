@@ -6,6 +6,14 @@ export const handler: Handler = async (event: any) => {
   const productId = event.pathParameters.id;
   try {
     const product = products.find((el) => el.id === productId);
+
+    if(!product) {
+      return {
+        statusCode: 404,
+        headers: { "Content-Type": "text/plain" },
+        body: `{Product with ${productId} is not found}` 
+      }
+    }
     return {
       statusCode: 200,
       headers: { "Content-Type": "text/plain" },
