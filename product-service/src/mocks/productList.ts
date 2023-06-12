@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
+
 interface Product {
   id: string;
   title: string;
@@ -7,31 +9,31 @@ interface Product {
 
 export const products: Product[] = [
   {
-    id: '1',
+    id: uuidv4(),
     title: "Product1",
     description: "Description",
     price: 100,
   },
   {
-    id: '2',
+    id: uuidv4(),
     title: "Product2",
     description: "Description",
     price: 200,
   },
   {
-    id: '3',
+    id: uuidv4(),
     title: "Product3",
     description: "Description",
     price: 300,
   },
   {
-    id: '4',
+    id: uuidv4(),
     title: "Product4",
     description: "Description",
     price: 400,
   },
   {
-    id: '5',
+    id: uuidv4(),
     title: "Product5",
     description: "Description",
     price: 500,
