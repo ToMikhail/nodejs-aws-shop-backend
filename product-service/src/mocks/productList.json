@@ -1,0 +1,54 @@
+{
+  "AWS_Cloud_Products": [
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "deeac8f7-cfd7-45ae-b9aa-100c6e15f0cb" },
+          "title": { "S": "Product1" },
+          "description": { "S": "Description"},
+          "price": { "N": "100" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "9cbbb25c-aa29-4277-8844-13ab1493a5e3" },
+          "title": { "S": "Product2" },
+          "description": { "S": "Description" },
+          "price": { "N": "200" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "59b263d4-ed24-4061-9898-9d02230f9504" },
+          "title": { "S": "Product3" },
+          "description": { "S": "Description" },
+          "price": { "N": "300" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "09b8aa27-1652-49b8-9c0f-d1872d105014" },
+          "title": { "S": "Product4" },
+          "description": { "S": "Description" },
+          "price": { "N": "400" }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "id": { "S": "3e44e5a2-b6d9-482b-8fc5-21a45964551b" },
+          "title": { "S": "Product5" },
+          "description": { "S": "Description" },
+          "price": { "N": "500" }
+        }
+      }
+    }
+  ]
+}
