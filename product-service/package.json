@@ -12,7 +12,8 @@
     "cdk:deploy": "cdk deploy --require-approval never",
     "cdk:destroy": "cdk destroy --force",
     "cdk:bootstrap": "cdk bootstrap",
-    "cdk:synth": "cdk synth"
+    "cdk:synth": "cdk synth",
+    "db:write": "aws dynamodb batch-write-item --request-items file://src/mocks/productList.json"
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",
@@ -32,6 +33,7 @@
     "aws-cdk-lib": "2.81.0",
     "aws-lambda": "^1.0.7",
     "constructs": "^10.0.0",
+    "dotenv": "^16.1.4",
     "source-map-support": "^0.5.21",
     "uuid": "^9.0.0"
   }

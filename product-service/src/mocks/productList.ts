@@ -1,11 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-
-interface Product {
-  id: string;
-  title: string;
-  description: string;
-  price: number;
-}
+import { Product } from "../interfaces/product.interface";
 
 export const products: Product[] = [
   {

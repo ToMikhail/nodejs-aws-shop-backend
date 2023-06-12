@@ -4,11 +4,33 @@ import { Construct } from "constructs";
 import * as apiGateway from "@aws-cdk/aws-apigatewayv2-alpha";
 import { HttpLambdaIntegration } from "@aws-cdk/aws-apigatewayv2-integrations-alpha";
 import * as lambda from "aws-cdk-lib/aws-lambda";
+import * as dynamoDB  from "aws-cdk-lib/aws-dynamodb";
+import * as iam from "aws-cdk-lib/aws-iam";
 
+
+const table = 'AWS_Cloud_Products'
 export class ProductServiceStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
+    // console.log('urla',`${process.env.DYNAMO_DB_ARN}/${table}`);
+    // console.log('tabla',dynamoDB.Table(this, `${table}Table`, table).process.env.DYNAMO_DB_ARN);
+
+
+
+    
+        // Grant additional permissions for Scan operation
+    const dynamoDBPolicy = new iam.PolicyStatement({
+      effect: iam.Effect.ALLOW,
+      actions: [
+        "dynamodb:Scan",
+        "dynamodb:Query",
+        "dynamodb:PutItem",
+        "dynamodb:UpdateItem",
+        "dynamodb:TransactWriteItems"
+      ],
+      resources: ["arn:aws:dynamodb:eu-west-1:290971342614:table/*"],
+    });
     // The code that defines your stack goes here
 
     const sharedLambdaProps: Partial<NodejsFunctionProps> = {

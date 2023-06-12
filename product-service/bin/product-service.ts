@@ -3,6 +3,8 @@ import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
 import { ProductServiceStack } from '../lib/product-service-stack';
 
+import 'dotenv/config'
+
 const app = new cdk.App();
 new ProductServiceStack(app, 'ProductServiceStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
@@ -15,6 +17,10 @@ new ProductServiceStack(app, 'ProductServiceStack', {
 
   /* Uncomment the next line if you know exactly what Account and Region you
    * want to deploy the stack to. */
-  env: { region: 'eu-west-1' },
+  env: { 
+    region: process.env.AWS_REGION,
+    // region: 'eu-west-1',
+    account: process.env.AWS_ACCOUNT
+ },
 
 });
